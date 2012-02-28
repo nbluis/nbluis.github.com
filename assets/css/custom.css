@@ -1,0 +1,8 @@
+.intro {
+  margin-top:50px;
+}
+.intro  p {
+  font-size:22px;
+  line-height:36px;
+  text-shadow:-1px 1px 1px #ccc;
+}
