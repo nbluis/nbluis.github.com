@@ -1,7 +1,16 @@
+hr {
+  height: 1px;
+  margin: 54px 0;
+  background-image: -webkit-linear-gradient(left, transparent, rgba(0, 0, 0, .1), transparent);
+  background-image: -moz-linear-gradient(left, transparent, rgba(0, 0, 0, .1), transparent);
+  background-image: -ms-linear-gradient(left, transparent, rgba(0, 0, 0, .1), transparent);
+  background-image: -o-linear-gradient(left, transparent, rgba(0, 0, 0, .1), transparent);
+  border: 0;
+}
 .intro {
   margin-top:50px;
 }
-.intro  p {
+.intro p {
   font-size:22px;
   line-height:36px;
   text-shadow:-1px 1px 1px #ccc;
@@ -18,4 +27,10 @@
   box-shadow: 0 0 7px rgba(0,0,0,0.5);
   -webkit-box-shadow: 0 0 7px rgba(0,0,0,0.5);
   -moz-box-shadow: 0 0 7px rgba(0,0,0,0.5);
+}
+.more h1{
+  margin: 36px 0 27px;
+  font-size: 40px;
+  font-weight: 300;
+  text-align: center;
 }
