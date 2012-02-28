@@ -6,3 +6,16 @@
   line-height:36px;
   text-shadow:-1px 1px 1px #ccc;
 }
+.profile img {
+  border:10px solid #fff;
+  border-bottom:30px solid #fff;
+  transform:rotate(4deg);
+  -webkit-transform: rotate(4deg);
+  -moz-transform: rotate(4deg);
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  box-shadow: 0 0 7px rgba(0,0,0,0.5);
+  -webkit-box-shadow: 0 0 7px rgba(0,0,0,0.5);
+  -moz-box-shadow: 0 0 7px rgba(0,0,0,0.5);
+}
