@@ -34,3 +34,13 @@ hr {
   font-weight: 300;
   text-align: center;
 }
+.more img {
+  float: left;
+  margin: 7px 10px 0 0;
+  opacity: .8;
+}
+.more p {
+  margin: 0 0 9px;
+  font-size: 13px;
+  line-height: 18px;
+}
