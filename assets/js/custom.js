@@ -1,5 +1,5 @@
 $(function() {
-  var repoUrl = 'https://api.github.com/users/nbluis/repos';
+  var repoUrl = 'https://api.github.com/users/nbluis/repos?callback=any';
   
   function createSlide(id, show) {
     var slideId = 'slideview-' + id;
