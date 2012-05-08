@@ -88,11 +88,11 @@ hr {
   width:10px;
   margin-right:3px;
   display:inline-block;
-  background:#888;
+  background:#555;
   border-radius:10px;
   cursor:pointer;
 }
 
 .slide li.selected {
-  background:#eee;
+  background:#aaa;
 }

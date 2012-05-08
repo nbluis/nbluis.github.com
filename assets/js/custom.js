@@ -16,7 +16,7 @@ $(function() {
     return $('<div></div>').attr('id', slideId).addClass('slideView').appendTo('.projects').toggle(show);
   };
   
-  $.get(repoUrl, function(projects) {
+  $.getJSON(repoUrl, function(projects) {
     var slideView = undefined;
     var slideNumber = 0;
 
