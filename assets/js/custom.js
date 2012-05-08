@@ -1,39 +1,39 @@
-$(function() {
-  var repoUrl = 'https://api.github.com/users/nbluis/repos?callback=any';
+function createSlide(id, show) {
+  var slideId = 'slideview-' + id;
   
-  function createSlide(id, show) {
-    var slideId = 'slideview-' + id;
-    
-    $('.slide').append(
-      $('<li></li>').addClass( (show) ? 'selected' : '' ).on('click', function() {
-        $('.slide li.selected').removeClass('selected');
-        $(this).addClass('selected');
-        $('.slideView:visible').slideUp();
-        $('#' + slideId).slideDown();
-      })
-    );
-    
-    return $('<div></div>').attr('id', slideId).addClass('slideView').appendTo('.projects').toggle(show);
-  };
+  $('.slide').append(
+    $('<li></li>').addClass( (show) ? 'selected' : '' ).on('click', function() {
+      $('.slide li.selected').removeClass('selected');
+      $(this).addClass('selected');
+      $('.slideView:visible').slideUp();
+      $('#' + slideId).slideDown();
+    })
+  );
   
-  $.getJSON(repoUrl, function(projects) {
-    var slideView = undefined;
-    var slideNumber = 0;
+  return $('<div></div>').attr('id', slideId).addClass('slideView').appendTo('.projects').toggle(show);
+};
 
-    for(var index in projects) {
-      var project = projects[index];
+function githubCallback(projects) {
+  var slideView = undefined;
+  var slideNumber = 0;
 
-      if (index % 3 == 0)
-        slideView = createSlide(++slideNumber, slideNumber == 1);
-      
-      $('<div class="span4 project"></div>')
-        .append(
-          $('<h4></h4>')
-            .append($('<a></a>').attr('href',project['html_url']).text(project['name']))
-            .append($('<span></span>').text(project['language'] || '')))
-        .append(
-          $('<p></p>').text(project['description'])
-        ).appendTo(slideView);
-    }
-  });
+  for(var index in projects.data) {
+    var project = projects.data[index];
+
+    if (index % 3 == 0)
+      slideView = createSlide(++slideNumber, slideNumber == 1);
+    
+    $('<div class="span4 project"></div>')
+      .append(
+        $('<h4></h4>')
+          .append($('<a></a>').attr('href',project['html_url']).text(project['name']))
+          .append($('<span></span>').text(project['language'] || '')))
+      .append(
+        $('<p></p>').text(project['description'])
+      ).appendTo(slideView);
+  }
+};
+
+$(function() {  
+  $.ajax('https://api.github.com/users/nbluis/repos?callback=githubCallback');
 });
