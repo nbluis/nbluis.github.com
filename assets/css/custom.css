@@ -1,6 +1,6 @@
 hr {
   height: 1px;
-  margin: 54px 0;
+  margin: 15px 0;
   background-image: -webkit-linear-gradient(left, transparent, rgba(0, 0, 0, .1), transparent);
   background-image: -moz-linear-gradient(left, transparent, rgba(0, 0, 0, .1), transparent);
   background-image: -ms-linear-gradient(left, transparent, rgba(0, 0, 0, .1), transparent);
@@ -9,6 +9,7 @@ hr {
 }
 .intro {
   margin-top:50px;
+  margin-bottom:60px;
 }
 .intro p {
   font-size:22px;
@@ -29,7 +30,7 @@ hr {
   -moz-box-shadow: 0 0 7px rgba(0,0,0,0.5);
 }
 .more h1{
-  margin: 36px 0 27px;
+  margin: 20px 0 27px;
   font-size: 40px;
   font-weight: 300;
   text-align: center;
@@ -46,7 +47,52 @@ hr {
 }
 
 .about {
-  margin-top:50px;
+  margin-top:30px;
   text-align:right;
   padding-bottom:2px;
+}
+
+.project {
+  border:1px solid #ddd;
+  border-radius:4px;
+  padding:5px;
+  margin-left: 8px;
+  margin-bottom: 10px;
+}
+
+.project h4 {
+  background: url(../img/project.png) no-repeat;
+  padding-left:20px;
+  margin-bottom:5px;
+}
+
+.project h4 span {
+  float: right;
+  font-size: 10px;
+  color: #666;
+}
+
+.project p {
+  margin:0;
+  background-color:#eee;
+  padding:5px;
+  font-size:12px;
+  color:#444;
+}
+
+.slide {
+  text-align:center;
+}
+.slide li {
+  height:10px;
+  width:10px;
+  margin-right:3px;
+  display:inline-block;
+  background:#888;
+  border-radius:10px;
+  cursor:pointer;
+}
+
+.slide li.selected {
+  background:#eee;
 }
