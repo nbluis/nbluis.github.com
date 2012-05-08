@@ -34,6 +34,6 @@ function githubCallback(projects) {
   }
 };
 
-$(function() {  
-  $.ajax('https://api.github.com/users/nbluis/repos?callback=githubCallback');
+$(function() {
+  $('body').append($('<script></script>').attr('src', 'https://api.github.com/users/nbluis/repos?callback=githubCallback'));
 });
