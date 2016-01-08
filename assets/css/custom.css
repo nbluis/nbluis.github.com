@@ -28,6 +28,7 @@ hr {
   box-shadow: 0 0 7px rgba(0,0,0,0.5);
   -webkit-box-shadow: 0 0 7px rgba(0,0,0,0.5);
   -moz-box-shadow: 0 0 7px rgba(0,0,0,0.5);
+  backface-visibility: hidden;
 }
 .more h1{
   margin: 20px 0 27px;
